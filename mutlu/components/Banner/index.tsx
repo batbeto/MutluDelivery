@@ -8,12 +8,15 @@ export const Banner = () => {
     <div className={styles.container}>
       <Swiper
         spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={1}
+        className={styles.swiper}
+        autoplay = {{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide className={styles.slide}><div className={styles.slideImg}>1</div></SwiperSlide>
+        <SwiperSlide className={styles.slide}><div className={styles.slideImg}>2</div></SwiperSlide>
       </Swiper>
     </div>
   );
